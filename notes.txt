@@ -1,0 +1,2 @@
+-- Intall lite-server  ( webserver )
+npm install --save-dev lite-server  

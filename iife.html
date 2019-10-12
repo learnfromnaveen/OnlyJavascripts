@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html> 
+    <head>  
+        <title>My javascript sample..</title>
+    </head>
+    <body>
+        <div id="container">  
+        </div>
+        <script type="text/javascript"> 
+        
+            /*
+               An IIFE (Immediately Invoked Function Expression) is a JavaScript 
+               function that runs as soon as it is defined. 
+               (function () { statements })(); 
+               It is a design pattern which is also known as a 
+               Self-Executing Anonymous Function and contains two major parts.
+               
+            */
+        
+            (function (message){ 
+                var container = document.querySelector("#container");  
+                if(container){
+                    container.innerHTML = "<h1>" + message  + "</h1>"  
+                }
+            })("Welcome to Advanced javascript!!!!!");
+
+            
+        </script>
+    </body>
+</html> 

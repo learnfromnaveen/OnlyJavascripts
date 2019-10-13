@@ -1,0 +1,17 @@
+{ 
+    "persons":[
+        { "name": "Vivaan"
+            , "email" : "viv@gmail.com"
+            , "mobile" : 9887876654
+            , "addressess": [
+                { "isPrimary" : true
+                    , "house": "#3434"
+                    , "street" : "street"
+                    , "zipCode" : "123123"
+                    , "state" : "state"
+                    , "country" : "country"  
+                }
+            ]
+        }
+    ]
+}

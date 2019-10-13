@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic controls examples</title>
+    <script type="text/javascript" src="scripts/mocks/users.js"></script>
+    <script type="text/javascript" src="scripts/table-plugin.js"></script>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script type="text/javascript"> 
+        function loadUsers(container){ 
+          var users  = getUsers();  
+          var configuration   =  { 
+              classNames : 'table table-striped',  
+             data :  users,  
+              schema: { 
+                Name: 'name',  
+                Username: 'username',  
+                Email: 'email'
+            },  
+            targetContainer: container
+          }
+
+          jsTable.genarateTable(configuration);
+        }
+        
+    </script>
+  </head>
+  <body>
+    <div class="controls-container">
+    </div>
+    <div class="action-controls">
+        <button type="button" onclick="loadUsers('.controls-container')">Load Users</button>
+    </div>
+  </body>
+</html>

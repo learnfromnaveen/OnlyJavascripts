@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My javascript example..</title>
+    <script src="./scripts/utilities/http-client/http-client.js"></script>
+    <script>
+      function getUsers() {
+        var httpClient = Application.HttpFactory.HttpClient;
+        httpClient.get(
+          "https://jsonplaceholder.typicode.com/users",
+          onSuccess,
+          onFailure
+        );
+      }
+
+      function onSuccess(data) {
+        var control = document.querySelector("#content");
+        if (control) {
+          control.innerText = JSON.stringify(data);
+        }
+      }
+
+      function onFailure(error) {
+        console.log(error);
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="control">
+      <button type="button" onclick="getUsers()">
+        Get Users
+      </button>
+    </div>
+    <div id="content"></div>
+  </body>
+</html>

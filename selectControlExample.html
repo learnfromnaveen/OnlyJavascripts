@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My javascript example..</title>
+    <script src="./scripts/utilities/http-client/http-client.js"></script>
+  </head>
+
+  <body>
+    <async-select
+      data-url="https://jsonplaceholder.typicode.com/users"
+      data-value="id"
+      data-text="name"
+    >
+    </async-select>
+    <async-select
+      data-url="https://jsonplaceholder.typicode.com/todos"
+      data-value="id"
+      data-text="title"
+    >
+    </async-select>
+    <script
+      src="./scripts/utilities/controls/selectAsynControl.js"
+      defer
+    ></script>
+  </body>
+</html>
